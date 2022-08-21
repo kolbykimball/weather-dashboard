@@ -6,7 +6,7 @@ body {
     
 }
 
-header {
+.jumbotron {
     padding: 50px;
     text-align: center;
     background-image: linear-gradient(blue, cyan);
@@ -21,14 +21,20 @@ aside {
     flex: 30%;
     background-color: rgb(255, 255, 255);
     padding: 20px;
-    flex-wrap: wrap;
 }
 section {
     flex: 70%;
     /* background-color: aliceblue; */
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .container {
-    background-color: gray;
 }
+
+.card {
+    display:inline-block;
+    background-color: gray;
+    color: white;
+}
+

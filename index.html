@@ -7,36 +7,97 @@
     <title>Weather Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- insert font awesome icons here  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>Weather Dashboard</h1>
-    </header>
+    <div class="jumbotron jumbotron-fluid">
+        <div>
+            <h1 class="display-3" style="font-weight:bolder">Weather Dashboard</h1>
 
+        </div>
+    </div>
     <main>
         <aside>
             <div>
                 <label for="searchBar">Search for a City:</label>
                 <input type="text" id="citySearch" placeholder=" Salt Lake City">
-                <button class="searchBtn">Search</button>
+                <button class="btn btn-primary" id="search-button">Search</button>
             </div>
             <hr>
-            <div class="pastSearches">
+            <div class="history">
+                <button class="btn btn-primary" id="clear-history">Clear History</button>
+                <ul class="pastSearches">
 
+                </ul>
             </div>
 
         </aside>
 
-        <section>
-            <div class="container-fluid container">
-                
+        <section class="col-sm-8">
+            <div class="row border border-dark rounded">
+                <div class="col-sm-12" id="currentWeather">
+                    <h2 class="cityName" id="currentCity"></h2>
+                    <p>Temp:<span class="current" id="temp"></span></p>
+                    <p>Humidity:<span class="current" id="humidity"></span></p>
+                    <p>Wind:<span class="current" id="wind"></span></p>
+                    <p>Uv Index:<span class="current" id="uvIndex"></span></p>
+                </div>
             </div>
 
         </section>
-    
     </main>
+    <container id="future-weather">
+        <h3>5 Day Forecast:</h3>
+        <div class="card" style="width: 18rem;">
+
+            <h5 class="date0">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+
+            <p>Temp:<span id="Temp1"></span></p>
+
+        </div>
+        <div class="card" style="width: 18rem;">
+
+            <h5 class="date1">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+
+                <p>Temp:<span id="Temp2"></span></p>
+        </div>
+        <div class="card" style="width: 18rem;">
+
+            <h5 class="date2">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+
+                <p>Temp:<span id="Temp3"></span></p>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <h5 class="date3">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+                <p>Temp:<span id="Temp4"></span></p>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <h5 class="date4">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+                <p>Temp:<span id="Temp5"></span></p>
+        </div>
+    </container>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js"
+        integrity="sha512-8Y8eGK92dzouwpROIppwr+0kPauu0qqtnzZZNEF8Pat5tuRNJxJXCkbQfJ0HlUG3y1HB3z18CSKmUo7i2zcPpg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
